@@ -2,6 +2,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/raspberrypi")
-def hello_world():
+@app.route("/")
+def index():
     return "<p>Running on Pi</p>"
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
